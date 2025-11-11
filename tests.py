@@ -207,4 +207,3 @@ def test_warehouse_location_functions():
     warehouses = get_all_warehouse_locations()
     assert isinstance(warehouses, list)
     assert all(isinstance(loc, str) for loc in warehouses)
-
