@@ -38,7 +38,7 @@ if forecasts:
         sku, forecast_qty, f_date = f
         current_inventory = get_inventory_for_forecast(sku)
         gap = forecast_qty - current_inventory
-        STATUS = "OK" if gap <= 0 else "⚠️ Shortage"
+        status = "OK" if gap <= 0 else "⚠️ Shortage"
 
         forecast_table.append({
             "SKU": sku,
@@ -46,7 +46,7 @@ if forecasts:
             "Date": f_date,
             "Current Inventory": current_inventory,
             "Gap": gap,
-            "Status": STATUS
+            "Status": status
         })
 
     st.table(forecast_table)
