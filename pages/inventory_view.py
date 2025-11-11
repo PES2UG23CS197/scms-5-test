@@ -46,13 +46,13 @@ for location in sorted_locations:
                 "Quantity": qty
             })
         else:
-            STATUS = "Low" if qty < threshold else "OK"
+            status = "Low" if qty < threshold else "OK"
             table_data.append({
                 "SKU": sku,
                 "Product Name": name,
                 "Quantity": qty,
                 "Threshold": threshold,
-                "Status": STATUS
+                "Status": status
             })
 
     st.table(table_data)
